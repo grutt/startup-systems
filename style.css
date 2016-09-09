@@ -1,3 +1,14 @@
+body{
+    padding-top:3em;
+}
 .social a{
     font-size: 2em;
+}
+
+.headshot{
+    width:100px;
+}
+
+.bio{
+    padding: 20px 0;
 }
