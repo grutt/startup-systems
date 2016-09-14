@@ -1,4 +1,9 @@
 body{
+    background: url(bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     padding-top:3em;
 }
 .social a{
@@ -6,9 +11,34 @@ body{
 }
 
 .headshot{
-    width:100px;
+    width:130px;
+    border:15px solid #fff;
 }
 
 .bio{
-    padding: 20px 0;
+    max-width: 700px;
+    background:white;
+    border-radius:15px;
+    padding: 20px;
+    margin: -15px auto 15px auto;
+
+}
+
+.netid{
+  padding:8px;
+}
+
+.netid small{
+  border-radius:5px;
+  padding: 5px;
+  background:rgba(255,255,255,.5);
+  color:#333;
+}
+
+.bgAttr{
+  position:absolute;
+  bottom:0;
+  right:0;
+  background:#333;
+  color:#fff;
 }
