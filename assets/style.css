@@ -42,3 +42,9 @@ body{
   background:#333;
   color:#fff;
 }
+
+.contactMe{
+    display:none;
+    width:300px;
+    margin: 0 auto;
+}
