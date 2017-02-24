@@ -8,10 +8,11 @@
 <style type="text/css">
 html, body{
     font-family: 'Droid Sans', sans-serif;
-
+    font-size:2em;
     margin:0px;
     padding:0px;
 }
+
 
 .scrollydoo{
     width:100%;
@@ -34,10 +35,24 @@ html, body{
 }
 
 .message{
-    background-color:purple;
-    border-radius: 25px;
-    margin:90px;
+    background-color:grey;
+    border-radius: 25px 25px 0px 0px;
+    margin:90px 90px 0px 90px;
     padding:20px;
+}
+
+.buttons{
+    margin:0px 90px 90px 90px;
+
+}
+
+.buttons div{
+    border:1px solid grey;
+    padding:20px;
+}
+
+.buttons div:last-child{
+    border-radius: 0px 0px 25px 25px;
 
 }
 </style>
@@ -45,7 +60,7 @@ html, body{
 <div class="message">
 Hey Sonia, i noticed you aren’t up to your normal routine.<br />
 How are you feeling?
-
+</div><div class="buttons">
 <div>Stressed</div>
 <div>Exhausted</div>
 <div>Sick</div>
@@ -56,6 +71,7 @@ How are you feeling?
 <div class="message">
 Bummer :( <br />
 What’s wrong? You can pick more than one thing
+</div><div class="buttons">
 <div>Throat hurts*</div>
 <div>Fever</div>
 <div>Cough</div>
@@ -66,6 +82,7 @@ What’s wrong? You can pick more than one thing
 
 <div class="message">
 How long have you been feeling this way?
+</div><div class="buttons">
 <div>0 - 2 days </div>
 <div>3 - 5 days</div>
 <div>6+ days  </div>
