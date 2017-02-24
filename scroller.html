@@ -11,6 +11,8 @@ html, body{
     font-size:2em;
     margin:0px;
     padding:0px;
+    background-color:rgb(46,80,161);
+
 }
 
 
@@ -35,8 +37,7 @@ html, body{
 }
 
 .message{
-    background-color:grey;
-    border-radius: 17px 17px 0px 0px;
+    color:#fff;
     margin:90px 90px 0px 90px;
     padding:20px;
 }
@@ -49,47 +50,107 @@ html, body{
 .buttons div{
     border:1px solid grey;
     padding:20px;
+    background-color: white;
 }
 
 .buttons div:last-child{
     border-radius: 0px 0px 17px 17px;
 }
 
+.buttons div:first-child{
+    border-radius: 17px 17px 0px 0px ;
+}
+
+.response{
+    text-align: right;
+    padding:20px;
+
+}
+
+.active{
+    background-color: pink;
+}
 </style>
 
+<script type="text/javascript">
+$(function(){
+    $("#c1").hide();
+    $("#c2").hide();
+    $("#c3").hide();
+    $("#c4").hide();
+
+    $("#a1").click(function(){
+        $("#c1").show();
+        $(this).addClass('active');
+        $("html, body").animate({ scrollTop: $(document).height() }, "slow");
+    });
+
+    $("#a2").click(function(){
+        $("#c2").show();
+        $(this).addClass('active');
+        $("html, body").animate({ scrollTop: $(document).height() }, "slow");
+    });
+
+    $("#a3").click(function(){
+        $("#c3").show();
+        $(this).addClass('active');
+        $("html, body").animate({ scrollTop: $(document).height() }, "slow");
+    });
+});
+</script>
+
+
 <div class="message">
-Hey Sonia, i noticed you aren’t up to your normal routine.<br />
+Hey Sonia,<br />
+I noticed you aren’t up to your normal routine.<br />
 How are you feeling?
 </div><div class="buttons">
-<div>Stressed</div>
+<div id="a1">Stressed</div>
 <div>Exhausted</div>
 <div>Sick</div>
 <div>I’m ok, thanks for checking!</div>
 
 </div>
 
-<div class="message">
-Bummer :( <br />
-What’s wrong? You can pick more than one thing
-</div><div class="buttons">
-<div>Throat hurts*</div>
-<div>Fever</div>
-<div>Cough</div>
-<div>Headache</div>
-<div>Runny Nose</div>
-<div>Something else...</div>
+<div id="c1">
+    <div class="response" >
+    Stressed
+    </div>
+
+    <div class="message">
+    Bummer :( <br />
+    What’s wrong? You can pick more than one thing
+    </div><div class="buttons">
+    <div id="a2">Throat hurts</div>
+    <div>Fever</div>
+    <div>Cough</div>
+    <div>Headache</div>
+    <div>Runny Nose</div>
+    <div>Something else...</div>
+    </div>
 </div>
 
-<div class="message">
-How long have you been feeling this way?
-</div><div class="buttons">
-<div>0 - 2 days </div>
-<div>3 - 5 days</div>
-<div>6+ days  </div>
+<div id="c2">
+    <div class="response">
+    Throat hurts and Cough
+    </div>
+
+    <div class="message">
+    How long have you been feeling this way?
+    </div><div class="buttons">
+    <div id="a3">0 - 2 days </div>
+    <div>3 - 5 days</div>
+    <div>6+ days  </div>
+    </div>
+</div>
+<div id="c3">
+    <div class="response">
+    0 - 2 days
+    </div>
 </div>
 
 
-
+<div id="c4">
 <div class="scrollydoo">
     <div class="innerScroll">
         <div class="prod">
@@ -104,12 +165,9 @@ How long have you been feeling this way?
         </div>
         <div class="prod">
         </div>
-
-
-
     </div>
 </div>
-
+</div>
 
 </body>
 </html>
