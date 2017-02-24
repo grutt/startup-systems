@@ -65,7 +65,7 @@ html, body{
 .response{
     text-align: right;
     padding:20px;
-
+    color:white;
 }
 
 .active{
@@ -89,6 +89,14 @@ margin-left:40px;
     color:#000 !important;
     background-color: #fff;
 }
+.whiteSlice{
+    width:100%;
+    background-color: #fff;
+    padding:10px 0px;
+}
+.tiny{
+    font-size:0.6em;
+}
 </style>
 
 <script type="text/javascript">
@@ -99,12 +107,12 @@ $(function(){
     $("#c2").hide();
     $("#c3").hide();
     $("#c4").hide();
-
-
+    $("#c5").hide();
+/*
     $("#c3").css({"height": $(window).height()+"px"})
     $("#c3").show();
     $("html, body").delay(300).animate({ scrollTop: $("#c3").offset().top }, "slow");
-
+*/
 
     $("#a1").click(function(){
         $("#c1").show();
@@ -132,6 +140,23 @@ $(function(){
 
         $(this).addClass('active');
     });
+
+    $("#vicks").click(function(){
+        $("#asset3").show();
+        $("#c4").css({"height": $(window).height()+"px"})
+        $("#c4").show();
+        $("html, body").delay(300).animate({ scrollTop: $("#c4").offset().top }, "slow");
+
+    });
+
+    $("#a5").click(function(){
+
+        $("#c5").show();
+        $("html, body").animate({ scrollTop: $(document).height() }, "slow");
+
+        $(this).addClass('active');
+    });
+
 });
 </script>
 
@@ -202,18 +227,43 @@ How are you feeling?
         I think these things will make you feel better.<br />
         They should last you about four days.<br />
         What do you think?
-    </div>
+    </div><br />
 <img id="asset1" class="prodBox" src="Asset 1.png" />
+<div class="selecty">
 <div class="messageSlot">
-    What did I miss?
+    What did I DLKFJSD?
 </div>
 
 <div class="scrollydoo">
     <div class="innerScroll">
-        <img src="Asset 2.png" />
+        <img src="Asset 2.png" id="vicks" />
     </div>
 </div>
 </div>
+</div>
+
+<div id="c4">
+
+<div class="whiteSlice">
+<br />
+    <img id="asset3" class="prodBox" src="Asset 3.png" />
+</div>
+
+<div class="message">
+I can have this to you in 45 minutes.<br />
+Lets do this?
+</div><div class="buttons">
+    <div id="a5">Send it my way!</div>
+    <div class="tiny">Wait, I want to change something</div>
+</div>
+</div>
+<div id="c5">
+    <div class="message">
+    Relief is on it's way, Sonia!<br />
+    ❤️️
+    </div>
+</div>
+
 
 </body>
 </html>
