@@ -1,10 +1,20 @@
+.top{
+    margin-top:0px;
+    border-radius: 0px;
+    background-color:blue;
+}
+
+.highlight{
+    background-color: yellow;
+    padding:3px;
+}
+
 body{
     background: url('images/bg.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    padding-top:3em;
 }
 .social a{
     font-size: 2em;
