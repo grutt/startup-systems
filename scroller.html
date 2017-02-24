@@ -61,6 +61,9 @@ html, body{
     border-radius: 17px 17px 0px 0px ;
 }
 
+.buttons div:hover{
+    background-color: #dbdbdb;
+}
 .response{
     text-align: right;
     padding:20px;
@@ -70,14 +73,40 @@ html, body{
 .active{
     background-color: pink;
 }
+
+.prodBox{
+width:90%;
+margin-left:40px;
+}
+
+.messageP{
+    margin:90px 90px 0px 90px;
+    padding:20px;
+}
+.messageSlot{
+    padding: 0px 90px 0px 90px;
+}
+
+#c3{
+    color:#000 !important;
+    background-color: #fff;
+}
 </style>
 
 <script type="text/javascript">
 $(function(){
     $("#c1").hide();
+    $("#c1b").hide();
+
     $("#c2").hide();
     $("#c3").hide();
     $("#c4").hide();
+
+
+    $("#c3").css({"height": $(window).height()+"px"})
+    $("#c3").show();
+    $("html, body").delay(300).animate({ scrollTop: $("#c3").offset().top }, "slow");
+
 
     $("#a1").click(function(){
         $("#c1").show();
@@ -86,15 +115,24 @@ $(function(){
     });
 
     $("#a2").click(function(){
+        $("#c1b").show();
+        $(this).addClass('active');
+        $("html, body").animate({ scrollTop: $(document).height() }, "slow");
+    });
+
+    $("#a2b").click(function(){
         $("#c2").show();
         $(this).addClass('active');
         $("html, body").animate({ scrollTop: $(document).height() }, "slow");
     });
 
     $("#a3").click(function(){
+
+        $("#c3").css({"height": $(window).height()+"px"})
         $("#c3").show();
+        $("html, body").delay(300).animate({ scrollTop: $("#c3").offset().top }, "slow");
+
         $(this).addClass('active');
-        $("html, body").animate({ scrollTop: $(document).height() }, "slow");
     });
 });
 </script>
@@ -105,52 +143,73 @@ Hey Sonia,<br />
 I noticed you aren’t up to your normal routine.<br />
 How are you feeling?
 </div><div class="buttons">
-<div id="a1">Stressed</div>
+<div>Stressed</div>
 <div>Exhausted</div>
-<div>Sick</div>
+<div id="a1">Sick</div>
 <div>I’m ok, thanks for checking!</div>
 
 </div>
 
 <div id="c1">
     <div class="response" >
-    Stressed
+    Sick
     </div>
 
     <div class="message">
-    Bummer :( <br />
-    What’s wrong? You can pick more than one thing
+    Bummer 😫 <br />
+    What’s bothering you the most?
     </div><div class="buttons">
-    <div id="a2">Throat hurts</div>
-    <div>Fever</div>
-    <div>Cough</div>
-    <div>Headache</div>
-    <div>Runny Nose</div>
-    <div>Something else...</div>
+        <div id="a2">Throat hurts</div>
+        <div>Fever</div>
+        <div>Cough</div>
+        <div>Headache</div>
+        <div>Runny Nose</div>
+        <div>Something else...</div>
     </div>
 </div>
+
+<div id="c1b">
+    <div class="response" >
+    Throat hurts
+    </div>
+
+    <div class="message">
+    Anything else?
+    </div><div class="buttons">
+        <div>Fever</div>
+        <div>Cough</div>
+        <div>Headache</div>
+        <div>Runny Nose</div>
+        <div>Something else...</div>
+        <div id="a2b"><b>That's it</b></div>
+    </div>
+</div>
+
 
 <div id="c2">
     <div class="response">
-    Throat hurts and Cough
+    Just my Throat
     </div>
 
     <div class="message">
-    How long have you been feeling this way?
+    How bad?
     </div><div class="buttons">
-    <div id="a3">0 - 2 days </div>
-    <div>3 - 5 days</div>
-    <div>6+ days  </div>
+    <div id="a3">😕 😣 😩 😭</div>
     </div>
 </div>
+
+
 <div id="c3">
-    <div class="response">
-    0 - 2 days
+    <div class="messageP">
+        I think these things will make you feel better.<br />
+        They should last you about four days.<br />
+        What do you think?
     </div>
+<img id="asset1" class="prodBox" src="Asset 1.png" />
+<div class="messageSlot">
+    What did I miss?
 </div>
 
-
-<div id="c4">
 <div class="scrollydoo">
     <div class="innerScroll">
         <div class="prod">
