@@ -10,11 +10,19 @@
 }
 
 body{
-    background: url('images/bg.jpg') no-repeat center center fixed;
+    background: #333333 ;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+a {background:#990100;     color: #E8E8E8;}
+a:hover {background:#B90504;     color: #E8E8E8;}
+#stuff{
+    font-size: 950%;
+    color: #E8E8E8;
+
 }
 .social a{
     font-size: 2em;
